@@ -2,26 +2,45 @@
 <html>
 <head>
     <style>
-        button {
-          background-color: crimson; 
-          color: rgb(66, 224, 216);
-          padding: 10px 20px;
-          border: none;
-          font-size: 22px;
-          font-weight: 500;
-          border-radius: 5px;
-          cursor: pointer;
-          text-align: center;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
+button {
+  background-color: #fbe8c2;
+  border-radius: 100px;
+  box-shadow: rgba(75, 55, 10, 0.2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(130, 110, 21, 0.15) 0 2px 4px,rgba(104, 84, 10, 0.15) 0 4px 8px,rgba(62, 45, 2, 0.15) 0 8px 16px,rgba(187, 137, 44, 0.15) 0 16px 32px;
+  color: rgb(170, 128, 36);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Rocher';
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(50, 29, 7, 0.35) 0 -25px 18px -14px inset,rgba(51, 29, 6, 0.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(77, 51, 9, 0.25) 0 4px 8px,rgba(80, 53, 12, 0.25) 0 8px 16px,rgba(93, 57, 13, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+        
         
         
         body {
-          background-image: url("bkg.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
+          background-image: url("re.png");
+          
+          background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
         }
-
+        @media (max-width: 480px) {
+  body {
+    background-size: contain;
+  }
+}
         @font-face {
   font-family: 'Rocher';
   src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
@@ -74,8 +93,9 @@ h1 {
   font-family: 'Scheherazade', 'Arabic Typesetting', serif;
   font-size: 2.6em;
   margin-top: 1em;
-  color: aliceblue;
-  text-shadow: 2px 2px 8px #FF0000;
+  color: black;
+  text-shadow: 2px 2px 8px #361c03;
+  font-weight: bolder;
 }
 .quran .iqlab {
   color: purple;
@@ -113,20 +133,23 @@ h1 {
 		}
 	</script>
 </head>
+<br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <body>
-	<h1 class="mint">Click To generate a random ayah</h1>
-	<button onclick="getRandomAyah()">Generate Random Ayah</button>
-	<div>
-		<h3>Surah Name:</h3>
-		<p id="surah-name"  class="purples"></p>
-	</div>
-	<div>
-		<h3>Ayah Text:</h3>
+  
+	
+	<button onclick="getRandomAyah()" >Generate Random Ayah</button>
+
+	<div style="height: auto;">
 		<p id="ayah-text" class="quran"></p>
+	</div>
+  <div>
+		<h3>Surah Name:</h3>
+		<p id="surah-name"  class="grays"></p>
 	</div>
     <div>
         <h3>Ayah Number in the Quran:</h3>
-        <p id="ayah-number" class="purples"></p>
+        <p id="ayah-number" class="grays"></p>
     </div>
 </body>
+
 </html>
